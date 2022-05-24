@@ -29,7 +29,7 @@ exports.toRoman = function(num) {
         for(let key in roman_numeral_to_arabic_map) {
             if((num/roman_numeral_to_arabic_map[key]) >= 1) {
                 output.push(key);
-                num = num - roman_numeral_to_arabic_map[key]
+                num = num - roman_numeral_to_arabic_map[key];
             }
         }
     }
