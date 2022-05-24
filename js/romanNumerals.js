@@ -9,6 +9,7 @@
 // 7. Return OUTPUT
 
 exports.toRoman = function(num) {
+    let output = [];
     const roman_numeral_to_arabic_map = {
         M: 1000,
         CM: 900,
@@ -24,9 +25,17 @@ exports.toRoman = function(num) {
         IV: 4,
         I: 1
     }
-
-    for(let key in roman_numeral_to_arabic_map) {
-        
+    while(num != 0) {
+        for(let key in roman_numeral_to_arabic_map) {
+            if((num/roman_numeral_to_arabic_map[key]) >= 1) {
+                output.push(key);
+                num = num - roman_numeral_to_arabic_map[key]
+            }
+        }
     }
+
+    return output.join('');
     
 };
+
+// console.log(exports.toRoman(8));
