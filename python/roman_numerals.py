@@ -25,5 +25,4 @@ def to_roman(num):
                 num = num - roman_numeral_to_arabic_map[key]
                 break
 
-    print(input, '==', ''.join(output))
     return ''.join(output)
