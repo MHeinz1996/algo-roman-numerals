@@ -30,12 +30,10 @@ exports.toRoman = function(num) {
             if((num/roman_numeral_to_arabic_map[key]) >= 1) {
                 output.push(key);
                 num = num - roman_numeral_to_arabic_map[key];
+                break;
             }
         }
     }
-
     return output.join('');
     
 };
-
-// console.log(exports.toRoman(8));
