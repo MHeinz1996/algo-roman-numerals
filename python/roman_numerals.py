@@ -1,5 +1,4 @@
 def to_roman(num):
-    input = num
     output = []
 
     roman_numeral_to_arabic_map = {
@@ -22,7 +21,7 @@ def to_roman(num):
         for key in roman_numeral_to_arabic_map:
             if((num/roman_numeral_to_arabic_map[key]) >= 1):
                 output.append(key)
-                num = num - roman_numeral_to_arabic_map[key]
+                num -= roman_numeral_to_arabic_map[key]
                 break
 
     return ''.join(output)
