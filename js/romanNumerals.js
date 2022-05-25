@@ -10,7 +10,7 @@
 
 exports.toRoman = function(num) {
     let output = [];
-    const roman_numeral_to_arabic_map = {
+    const romanNumeralToArabicMap = {
         M: 1000,
         CM: 900,
         D: 500,
@@ -27,10 +27,10 @@ exports.toRoman = function(num) {
     }
 
     while(num != 0) {
-        for(let key in roman_numeral_to_arabic_map) {
-            if((num/roman_numeral_to_arabic_map[key]) >= 1) {
+        for(let key in romanNumeralToArabicMap) {
+            if((num/romanNumeralToArabicMap[key]) >= 1) {
                 output.push(key);
-                num = num - roman_numeral_to_arabic_map[key];
+                num = num - romanNumeralToArabicMap[key];
                 break;
             }
         }
