@@ -24,3 +24,4 @@ console.log(rn.toRoman(999) === 'CMXCIX');
 console.log(rn.toRoman(1000) === 'M');
 console.log(rn.toRoman(2000) === 'MM');
 console.log(rn.toRoman(3000) === 'MMM');
+console.log(rn.toRoman(3999) === 'MMMCMXCIX');
