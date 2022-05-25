@@ -25,6 +25,7 @@ exports.toRoman = function(num) {
         IV: 4,
         I: 1
     }
+
     while(num != 0) {
         for(let key in roman_numeral_to_arabic_map) {
             if((num/roman_numeral_to_arabic_map[key]) >= 1) {
@@ -34,6 +35,5 @@ exports.toRoman = function(num) {
             }
         }
     }
-    return output.join('');
-    
+    return output.join('');    
 };
